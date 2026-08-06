@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Foco • Painel de estudos e rotina</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <span class="logo-mark"></span>
+      <span class="logo-text">Foco</span>
+    </div>
+
+    <nav class="nav">
+      <a href="#" class="nav-item active" data-view="dashboard">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg>
+        Painel
+      </a>
+      <a href="#" class="nav-item" data-view="estudos">
+        <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        Estudos
+      </a>
+      <a href="#" class="nav-item" data-view="rotina">
+        <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Rotina
+      </a>
+      <a href="#" class="nav-item" data-view="atividades">
+        <svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+        Atividades
+      </a>
+      <a href="#" class="nav-item" data-view="estatisticas">
+        <svg viewBox="0 0 24 24"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6"/><rect x="12" y="8" width="3" height="10"/><rect x="17" y="5" width="3" height="13"/></svg>
+        Estatísticas
+      </a>
+      <a href="#" class="nav-item" data-view="config">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.6 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.6a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+        Ajustes
+      </a>
+    </nav>
+
+    <a href="#" class="nav-item logout">
+      <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><path d="M16 17l5-5-5-5"/><path d="M21 12H9"/></svg>
+      Sair
+    </a>
+  </aside>
+
+
+  <main class="main">
+
+    <header class="topbar">
+      <div>
+        <h1>Olá, Beatriz</h1>
+        <p class="subtitle">Foco total durante a semana!</p>
+      </div>
+
+      <div class="topbar-actions">
+        <div class="search">
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+          <input type="text" placeholder="Buscar matéria, hábito...">
+        </div>
+        <button class="icon-btn" aria-label="Notificações">
+          <svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+          <span class="dot"></span>
+        </button>
+        <div class="add-task">
+          <svg viewBox="0 0 24 24"><path d="M9 11h6M9 15h4"/><rect x="3" y="4" width="18" height="17" rx="3"/></svg>
+          <input type="text" placeholder="Adicionar novo hábito ou tarefa">
+          <button class="add-btn" id="addBtn" aria-label="Adicionar">
+            <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid-top">
+
+      <div class="card list-card">
+        <div class="card-head">
+          <h2>Matérias da semana</h2>
+        </div>
+        <ul class="item-list" id="subjectList">
+          <li>
+            <span class="item-icon icon-violet"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="item-text">Engenharia de Software</span>
+            <span class="item-tag">6h/sem</span>
+          </li>
+          <li>
+            <span class="item-icon icon-pink"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+            <span class="item-text">Programação Orientada a Objetos</span>
+            <span class="item-tag">3h/sem</span>
+          </li>
+          <li>
+            <span class="item-icon icon-violet"><svg viewBox="0 0 24 24"><path d="m16 18 6-6-6-6"/><path d="m8 6-6 6 6 6"/></svg></span>
+            <span class="item-text">Álgebra Linear</span>
+            <span class="item-tag">8h/sem</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="stat-stack">
+        <div class="card gradient-card">
+          <span class="stat-dot"></span>
+          <div class="stat-number">27h</div>
+          <div class="stat-label">Estudadas na semana</div>
+          <svg class="stat-bars" viewBox="0 0 40 24"><rect x="0" y="10" width="4" height="14"/><rect x="7" y="4" width="4" height="20"/><rect x="14" y="12" width="4" height="12"/><rect x="21" y="0" width="4" height="24"/><rect x="28" y="8" width="4" height="16"/><rect x="35" y="14" width="4" height="10"/></svg>
+        </div>
+        <div class="card gradient-card gradient-card-alt">
+          <span class="stat-dot"></span>
+          <div class="stat-number">5/7</div>
+          <div class="stat-label">Dias de treino cumpridos</div>
+          <svg class="stat-bars" viewBox="0 0 40 24"><rect x="0" y="10" width="4" height="14"/><rect x="7" y="4" width="4" height="20"/><rect x="14" y="12" width="4" height="12"/><rect x="21" y="0" width="4" height="24"/><rect x="28" y="8" width="4" height="16"/><rect x="35" y="14" width="4" height="10"/></svg>
+        </div>
+      </div>
+
+      <div class="card progress-card">
+        <h2>Meta semanal</h2>
+        <div class="progress-ring-wrap">
+          <svg class="blob" viewBox="0 0 200 200"><path d="M45.3,-58.5C57.9,-49.6,66.1,-33.9,69.5,-17.1C72.9,-0.3,71.5,17.6,63.5,31.9C55.4,46.2,40.6,56.9,24.2,63.5C7.7,70.1,-10.4,72.6,-26.6,67.6C-42.7,62.6,-56.9,50.1,-64.8,34.4C-72.7,18.7,-74.3,-0.2,-69.1,-16.7C-63.9,-33.2,-51.9,-47.3,-37.5,-56.1C-23.1,-64.9,-11.6,-68.4,3.5,-73.1C18.6,-77.8,37.1,-83.5,45.3,-58.5Z" transform="translate(100 100)"/></svg>
+          <svg class="ring" viewBox="0 0 140 140">
+            <circle class="ring-bg" cx="70" cy="70" r="60"/>
+            <circle class="ring-fill" cx="70" cy="70" r="60" id="ringFill"/>
+          </svg>
+          <div class="ring-center">
+            <div class="ring-percent">76%</div>
+            <div class="ring-caption">da meta</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-mid">
+
+
+      <div class="card chart-card">
+        <div class="card-head">
+          <div class="legend">
+            <span><i class="dot dot-violet"></i>Horas de estudo</span>
+            <span><i class="dot dot-pink"></i>Semana passada</span>
+          </div>
+          <div class="date-pill">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            06 Agosto 2026
+          </div>
+        </div>
+        <div class="chart-wrap">
+          <div class="y-axis">
+            <span>6h</span><span>5h</span><span>4h</span><span>3h</span><span>2h</span><span>1h</span><span>0h</span>
+          </div>
+          <svg class="chart" viewBox="0 0 700 260" preserveAspectRatio="none">
+            <defs>
+              <linearGradient id="areaViolet" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+              </linearGradient>
+              <linearGradient id="areaPink" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f472b6" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#f472b6" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path class="area area-pink" d="M0,190 C40,150 80,210 120,170 C160,130 200,190 240,150 C280,110 320,180 360,140 C400,100 440,160 480,130 C520,100 560,150 600,110 C640,80 680,120 700,90 L700,260 L0,260 Z" fill="url(#areaPink)"/>
+            <path class="line line-pink" d="M0,190 C40,150 80,210 120,170 C160,130 200,190 240,150 C280,110 320,180 360,140 C400,100 440,160 480,130 C520,100 560,150 600,110 C640,80 680,120 700,90"/>
+            <path class="area area-violet" d="M0,220 C40,200 80,150 120,190 C160,230 200,140 240,180 C280,220 320,120 360,160 C400,200 440,110 480,150 C520,190 560,90 600,130 C640,170 680,60 700,100 L700,260 L0,260 Z" fill="url(#areaViolet)"/>
+            <path class="line line-violet" d="M0,220 C40,200 80,150 120,190 C160,230 200,140 240,180 C280,220 320,120 360,160 C400,200 440,110 480,150 C520,190 560,90 600,130 C640,170 680,60 700,100"/>
+          </svg>
+        </div>
+        <div class="x-axis">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+        </div>
+      </div>
+
+      <div class="card calendar-card">
+        <div class="card-head">
+          <div>
+            <h2>Rotina do mês</h2>
+            <p class="muted">Agosto, terça-feira</p>
+          </div>
+          <div class="cal-nav">
+            <button aria-label="Mês anterior">
+              <svg viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+            </button>
+            <button aria-label="Próximo mês">
+              <svg viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></svg>
+            </button>
+          </div>
+        </div>
+        <div class="cal-weekdays">
+          <span>D</span><span>S</span><span>T</span><span>Q</span><span>Q</span><span>S</span><span>S</span>
+        </div>
+        <div class="cal-grid" id="calGrid"></div>
+      </div>
+    </section>
+
+    <section class="grid-bottom">
+
+      <div class="card activity-card">
+        <div class="card-head">
+          <h2>Atividades recentes</h2>
+        </div>
+        <ul class="activity-list">
+          <li>
+            <span class="item-icon icon-violet"><svg viewBox="0 0 24 24"><path d="M13 2 3 14h7l-1 8 10-12h-7l1-8z"/></svg></span>
+            <span class="act-name">Academia</span>
+            <span class="act-time">10:42 AM</span>
+            <span class="act-value pos">430 kcal</span>
+            <span class="act-status done">Concluída</span>
+          </li>
+          <li>
+            <span class="item-icon icon-pink"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></span>
+            <span class="act-name">Sessão de estudo: Desenvolvimento de Interfaces</I></span>
+            <span class="act-time">2:10 PM</span>
+            <span class="act-value pos">+2h 30</span>
+            <span class="act-status done">Concluída</span>
+          </li>
+          <li>
+            <span class="item-icon icon-violet"><svg viewBox="0 0 24 24"><path d="M6.5 6.5 17.5 17.5M6.5 17.5 17.5 6.5"/><rect x="2" y="9" width="6" height="6" rx="1"/><rect x="16" y="9" width="6" height="6" rx="1"/></svg></span>
+            <span class="act-name">Cardio - Corrida</span>
+            <span class="act-time">18:20 PM</span>
+            <span class="act-value pos">+45 min</span>
+            <span class="act-status pending">Em andamento</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="card message-card">
+        <div class="card-head">
+          <h2>Lembretes</h2>
+        </div>
+        <ul class="message-list">
+          <li>
+            <span class="avatar avatar-1">ML</span>
+            <div>
+              <p class="msg-name">Meta de leitura</p>
+              <p class="msg-text">Faltam 20 páginas para terminar o capítulo hoje.</p>
+            </div>
+          </li>
+          <li>
+            <span class="avatar avatar-2">HD</span>
+            <div>
+              <p class="msg-name">Hidratação</p>
+              <p class="msg-text">Você já bebeu 1 dos 2 litros de água hoje</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
