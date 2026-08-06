@@ -18,6 +18,7 @@ dashboard de controle de estudos e produtividade pessoal com interface desenvolv
 - ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 - ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 
+<img src="./print-foco.png" alt="Preview do Projeto Foco" width="100%">
 ---
 
 Você pode clonar este repositório e rodar localmente no seu dispositivo:
